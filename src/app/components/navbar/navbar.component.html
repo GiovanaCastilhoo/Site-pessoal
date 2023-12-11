@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#navbar">Giovana</a>
+    <button class="navbar-toggler" [class.open]="isNavbarOpen" [class.close]="!isNavbarOpen"  type="button" aria-label="menu" data-bs-toggle="offcanvas" (click)="toggleNavbar()">
+      <span *ngIf="!isNavbarOpen" class="navbar-toggler-icon"></span> 
+      <icon-close *ngIf="isNavbarOpen" class="btn-close"  [color]="'rgba(255,255,255, 0.9)'" [hoverColor]="'#BC8CF2'"></icon-close>
+    </button>
+    <div class="offcanvas offcanvas-top" [ngClass]="{'show': isNavbarOpen}" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"  [style.margin]="isNavbarOpen ? '60px auto' : 0">
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" [class.active]="selectedNavItem === 'WhoAmI'" (click)="selectedNavItem = 'WhoAmI'" aria-current="page" href="#home">WhoAmi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="selectedNavItem === 'Skills'"  (click)="selectedNavItem = 'Skills'" href="#">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="selectedNavItem === 'Experience'" (click)="selectedNavItem = 'Experience'" href="#">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  [class.active]="selectedNavItem === 'Contact'" (click)="selectedNavItem = 'Contact'" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
