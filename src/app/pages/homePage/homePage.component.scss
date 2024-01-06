@@ -4,17 +4,17 @@
 }
 
 .app-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 100px auto;
   width: 80%;
-  display: flex;
-  justify-content: center;
 
   & .body-header {
     align-items: center;
     display: flex;
     margin-top: 120px;
-    width: 75%;
-  
+
     & .content {
       margin: 30px 16px;
       width: 100%;
@@ -40,15 +40,17 @@
       margin: 0px auto;
       width: 80%;
       img {
+        border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
         height: 25rem;
         width: 25rem;
-        border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
       }
     }
   }
+
+  & .body-about {
+    margin-top: 200px;
+  }
 }
-
-
 
 @media (min-width: 600px) {
   .app-content {
@@ -56,11 +58,10 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .body-header {
-    align-items: center;
-    flex-direction: column;
+@media (max-width: 768px) {
+  .app-content {
+    & .body-header {
+      flex-direction: column;
+    }
   }
 }
-
-

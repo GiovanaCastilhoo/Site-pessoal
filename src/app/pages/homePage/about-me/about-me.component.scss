@@ -1,0 +1,29 @@
+.container-whoami {
+  display: flex;
+
+  & .image-whoami {
+    align-items: center;
+    img {
+      width: 25rem;
+    }
+  }
+
+    .whoami {
+      h2 {
+        color: #FFFF;
+        font-family: "Roboto", sans-serif;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      p {
+        color:#FFFF;
+      }
+
+      & .about-info {
+        display: flex;
+        flex-direction: column;
+        color: #FFFF;
+      }
+    }
+}
